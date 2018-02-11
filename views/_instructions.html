@@ -1,0 +1,32 @@
+<pre>
+- name repo acme-employee-directory
+- note - handle nicknames LAST!!!
+- note - worry about styling after nicknames!!
+- files
+  - server.js (20 loc)
+  - routes
+    index.js (70 loc)
+      / GET
+      /employees GET
+      /employees/:id GET - return 404 if not found
+      /employees/:id PUT - redirects to /employees
+      /employees/:id DELETE - redirects to /employees
+      /employees POST - redirects to /employees/:id
+  - db/
+    conn.js (3 loc)
+    Employee.js(40 loc)
+      attr
+        firstName
+        lastName
+        nicknames Sequelize.ARRAY(Sequelize.STRING)
+          - use a setter (if value is string then convert to array)
+      virtual method - for fullName 
+    index.js (20 loc)
+      - export sync and seed
+      - export models 
+  -views
+    layout.html
+    index.html
+    employee.html
+    employees.html
+</pre>

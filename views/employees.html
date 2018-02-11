@@ -1,0 +1,19 @@
+{% extends './layout.html' %}
+{% block content %}
+<form method='POST' style='border: solid 1px black; border-radius: 5px; padding: 10px;'>
+  <input name='firstName' placeholder='first name'/>
+  <input name='lastName' placeholder='last name'/>
+  <input name='nicknames' placeholder='nick names'/>
+  <button class='btn btn-primary'>Create A New Employee</button>
+</form>
+    <ul>
+  {% for employee in employees %}
+    <li> 
+      <a href='/employees/{{employee.id}}'>
+        {{ employee.fullName }}
+      </a>
+        {{ employee.nicknames.length }} nicknames
+    </li>
+  {% endfor %}
+    </ul>
+{% endblock %}

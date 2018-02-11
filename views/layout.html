@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.css' />
+  </head>
+  <body>
+    <div class='container'>
+    <h1>Acme Employee Directory</h1>
+    <h2>{{ title }}</h2>
+  <div>
+    We are a growing company, we currently have <span class='badge badge-primary'>{{ employeeCount }}</span> employees and <span class='badge badge-primary'>{{ nicknameCount}}</span> nicknames!
+  </div>
+    <ul>
+      <li>
+        <a href='/'>Home</a>
+      </li>
+      <li>
+        <a href='/employees'>Employees</a>
+      </li>
+    </ul>
+    {% block content %}
+    {% endblock %}
+    {% include './_instructions.html' %}
+    </div>
+  </body>
+</html>

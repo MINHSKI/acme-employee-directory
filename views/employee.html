@@ -1,0 +1,16 @@
+{% extends './layout.html' %}
+{% block content %}
+  <form method='POST' action='/employees/{{employee.id}}?_method=PUT' style='border: solid 1px black; border-radius: 5px;padding: 10px;'>
+    <input class='form-control' name='firstName' value='{{ employee.firstName }}' />
+    <br />
+    <input class='form-control' name='lastName' value='{{ employee.lastName }}' />
+    <br />
+    <input class='form-control' name='nicknames' value='{{ employee.nicknames }}' />
+    <br />
+    <button class='btn btn-primary'>Update</button>
+  </form>
+  <form method='POST' action='/employees/{{employee.id}}?_method=DELETE'>
+    <button class='btn btn-danger'>Delete {{ employee.fullName }}</button>
+  </form>
+{% endblock %}
+
