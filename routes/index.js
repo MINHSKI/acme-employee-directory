@@ -11,6 +11,7 @@ router.use((req, res, next)=> {
 
       res.locals.employeeCount = employees.length;
       res.locals.nicknameCount = nickNameCount;
+      res.locals.path = req.url;
       next();
     })
     .catch(next);

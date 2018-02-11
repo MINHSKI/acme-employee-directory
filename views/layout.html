@@ -10,10 +10,10 @@
     We are a growing company, we currently have <span class='badge badge-primary'>{{ employeeCount }}</span> employees and <span class='badge badge-primary'>{{ nicknameCount}}</span> nicknames!
   </div>
     <ul>
-      <li>
+      <li {% if path === '/' %}style='background-color:#efefef'{% endif %}>
         <a href='/'>Home</a>
       </li>
-      <li>
+      <li {% if path === '/employees' %}style='background-color:#efefef'{% endif %}>
         <a href='/employees'>Employees</a>
       </li>
     </ul>
